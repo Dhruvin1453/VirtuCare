@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VirtuCare">
         <activity
+            android:name=".doctorlist"
+            android:exported="false" />
+        <activity
+            android:name=".detailactivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

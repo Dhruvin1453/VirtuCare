@@ -9,4 +9,12 @@
         
     </style>
     
+    
+    
+    <style name="bottomnavigationselect">
+        
+        <item name="android:color">@color/maincolor</item>
+         <item name="android:shape">oval</item>
+        
+    </style>
 </resources>
