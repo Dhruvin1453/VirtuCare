@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VirtuCare">
         <activity
-            android:name=".doctorlist"
+            android:name=".appointments"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorList"
             android:exported="false" />
         <activity
             android:name=".detailactivity"

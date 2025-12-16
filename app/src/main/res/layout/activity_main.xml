@@ -230,6 +230,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:nestedScrollingEnabled="false"
         android:layout_height="wrap_content"/>
@@ -245,7 +246,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        app:itemActiveIndicatorStyle="@style/bottomnavigationselect"
+        app:itemActiveIndicatorStyle="@drawable/bottom_nav_active_indicator"
+       app:itemBackground="@drawable/bottom_navigation_bg_item"
         app:itemIconTint="@color/botomnavigationcolor"
         app:itemTextColor="@color/botomnavigationcolor"
         app:labelVisibilityMode="labeled"
