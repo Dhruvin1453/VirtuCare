@@ -117,6 +117,7 @@
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnappointments"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cornerRadius="10dp"

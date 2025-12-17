@@ -1,4 +1,6 @@
 package com.example.virtucare
+import android.content.Context
+import android.content.Intent
 import com.bumptech.glide.Glide
 
 
@@ -13,7 +15,7 @@ import androidx.constraintlayout.widget.ConstraintSet
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 
-class topdoctoradapter (private val doctorlist : ArrayList<doctordataModel>): RecyclerView.Adapter<topdoctoradapter.MyViewholder>(){
+class topdoctoradapter (private val context: Context,private val doctorlist : ArrayList<doctordataModel>): RecyclerView.Adapter<topdoctoradapter.MyViewholder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewholder {
@@ -35,6 +37,14 @@ class topdoctoradapter (private val doctorlist : ArrayList<doctordataModel>): Re
         Glide.with(holder.itemView.context)
             .load(currentList.imageurl)
             .into(holder.imageView)
+
+
+        holder.itemView.setOnClickListener {
+
+            val intent = Intent(context, detailactivity::class.java)
+            intent.putExtra("object",currentList)
+            context.startActivity(intent)
+        }
 
     }
 

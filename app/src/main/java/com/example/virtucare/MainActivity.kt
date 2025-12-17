@@ -136,7 +136,7 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
 
-                    binding.recyclerview.adapter = topdoctoradapter(doctorlist)
+                    binding.recyclerview.adapter = topdoctoradapter(this@MainActivity,doctorlist)
                 }
 
 

@@ -20,6 +20,7 @@ class DoctorList : AppCompatActivity() {
     lateinit var doctorlist: ArrayList<doctordataModel>
     lateinit var binding : ActivityDoctorlistBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
@@ -78,7 +79,7 @@ class DoctorList : AppCompatActivity() {
     private lateinit var adapter: doctorAdapter
 
     private fun setupRecyclerView() {
-        adapter = doctorAdapter(doctorlist)
+        adapter = doctorAdapter(this,doctorlist)
         binding.recyclerview.adapter = adapter
     }
 

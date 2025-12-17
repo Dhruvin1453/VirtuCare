@@ -1,15 +1,18 @@
 package com.example.virtucare
+import android.content.Context
+import android.content.Intent
 import com.bumptech.glide.Glide
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.virtucare.topdoctoradapter.MyViewholder
 
-class doctorAdapter(private val doctorlist : ArrayList<doctordataModel>) : RecyclerView.Adapter <doctorAdapter.MyViewHolder>(){
+class doctorAdapter( private val context: Context,private val doctorlist : ArrayList<doctordataModel>) : RecyclerView.Adapter <doctorAdapter.MyViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
@@ -31,6 +34,16 @@ class doctorAdapter(private val doctorlist : ArrayList<doctordataModel>) : Recyc
             .load(currentList.imageurl)
             .into(holder.imageView)
 
+
+
+        holder.btnappointments.setOnClickListener {
+
+            val intent = Intent(context, detailactivity::class.java)
+            intent.putExtra("object",currentList)
+            context.startActivity(intent)
+
+        }
+
     }
 
     override fun getItemCount(): Int {
@@ -45,5 +58,6 @@ class doctorAdapter(private val doctorlist : ArrayList<doctordataModel>) : Recyc
         val tvspecial : TextView = itemView.findViewById<TextView>(R.id.tvspecial)
         val tvExperience : TextView = itemView.findViewById<TextView>(R.id.tvExperience)
         val imageView: ImageView = itemView.findViewById(R.id.doctorImage)
+        val btnappointments : Button = itemView.findViewById<Button>(R.id.btnappointments)
     }
 }
