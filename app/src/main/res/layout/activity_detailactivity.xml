@@ -103,7 +103,8 @@
                 android:layout_gravity="center"
                 android:text="year"
                 android:textSize="15dp"
-                android:textStyle="normal" />
+                android:textStyle="normal"
+                android:layout_marginEnd="10dp"/>
 
         </LinearLayout>
 

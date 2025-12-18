@@ -60,6 +60,18 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation("com.github.bumptech.glide:glide:4.15.1")
-    kapt("com.github.bumptech.glide:compiler:4.15.1")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    kapt("com.github.bumptech.glide:compiler:4.16.0")
+
+    // CircleImageView for circular profile images
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+
+    // Material components
+    implementation("com.google.android.material:material:1.9.0")
+
+    implementation("com.google.firebase:firebase-storage-ktx")
+
+    implementation(libs.firebase.storage)
+
+
 }

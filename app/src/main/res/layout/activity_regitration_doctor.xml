@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".RegitrationDoctor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <!-- Profile Photo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile Photo *"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgDoctorPhoto"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_person_placeholder"
+                app:civ_border_width="3dp"
+                app:civ_border_color="#6366f1"
+                android:clickable="true"
+                android:focusable="true"/>
+
+
+            <ImageView
+                android:id="@+id/imgAddPhoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/ic_add"
+                android:background="@drawable/plus_circle_bg"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Add Photo"/>
+        </FrameLayout>
+
+
+        <!-- Full Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name *"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter full name"
+            android:textSize="15sp"
+            android:background="@drawable/edittext_border"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Specialization -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Specialization *"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spinnerSpecialization"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/spinner_bg_with_arrow"
+            android:paddingLeft="12dp"
+            android:paddingRight="40dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_marginBottom="12dp"/>
+
+
+        <!-- Qualification / Degree -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qualification / Degree *"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etQualification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. MBBS, MD"
+            android:textSize="15sp"
+            android:background="@drawable/edittext_border"
+            android:inputType="text"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Years of Experience -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Years of Experience *"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etExperience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter years of experience"
+            android:textSize="15sp"
+            android:background="@drawable/edittext_border"
+            android:inputType="number"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Medical Registration Number -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medical Registration Number *"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etRegistrationNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter registration number"
+            android:textSize="15sp"
+            android:background="@drawable/edittext_border"
+            android:inputType="text"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Hospital / Clinic Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hospital / Clinic Name *"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etHospitalName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter hospital or clinic name"
+            android:textSize="15sp"
+            android:background="@drawable/edittext_border"
+            android:inputType="text"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Location -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location *"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_border"
+            android:hint="Enter location"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Consultation Type -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Consultation Type *"
+            android:textStyle="bold"/>
+        <RadioGroup
+            android:id="@+id/rgConsultationType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <RadioButton
+                android:id="@+id/rbOnline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Online"/>
+            <RadioButton
+                android:id="@+id/rbOffline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Offline"/>
+            <RadioButton
+                android:id="@+id/rbBoth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Both"/>
+        </RadioGroup>
+
+        <!-- Consultation Fee -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Consultation Fee *"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etConsultationFee"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:layout_height="wrap_content"
+            android:hint="Enter consultation fee"
+            android:background="@drawable/edittext_border"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Available Days & Time -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available Days And Time *"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinnerDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/spinner_bg_with_arrow"
+            android:paddingLeft="12dp"
+            android:paddingRight="40dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_marginBottom="12dp"/>
+
+
+        <!-- Contact Number -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Number *"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etContactNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_border"
+            android:hint="Enter contact number"
+            android:textSize="15sp"
+            android:inputType="phone"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_border"
+            android:textSize="15sp"
+            android:hint="Enter email"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Bio / Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bio / Description"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etBio"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Enter bio or description"
+            android:background="@drawable/edittext_border"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Submit Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmitDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cornerRadius="6dp"
+            android:text="SUBMIT"
+            android:textStyle="normal"
+            android:textSize="15sp"
+            android:backgroundTint="@color/maincolor"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+</ScrollView>

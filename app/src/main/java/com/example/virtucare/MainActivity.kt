@@ -91,6 +91,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
 
+
                 R.id.doctors -> {
 
                     startActivity(Intent(this, DoctorList::class.java))
@@ -101,6 +102,12 @@ class MainActivity : AppCompatActivity() {
                 R.id.appointments-> {
 
                     startActivity(Intent(this, appointments::class.java))
+                    overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
+                    true
+                }
+
+                R.id.profile -> {
+                    startActivity(Intent(this, DoctorModuleAppointments::class.java))
                     overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
                     true
                 }

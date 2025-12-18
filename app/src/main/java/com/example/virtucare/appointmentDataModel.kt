@@ -9,4 +9,6 @@ data class appointmentDataModel(
     val date : String ? = null,
     val time : String ? = null,
 
+    val status: String? = "Pending"
+
 )

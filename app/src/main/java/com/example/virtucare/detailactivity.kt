@@ -48,7 +48,7 @@ class detailactivity : AppCompatActivity() {
 
 
             tvDname.text = item.name
-            tvspecial.text = item.specilization
+            tvspecial.text = item.specialization
             tvExperience.text = item.experience
             tvBio.text = item.bio
             tvAdress.text = item.email
@@ -79,8 +79,8 @@ class detailactivity : AppCompatActivity() {
 
 
 
-                        val name : String = "AkashGupta"
-                        val email : String = "akash67@gmail.com"
+                        val name : String = "Niraj Chauhan"
+                        val email : String = "niraj67@gmail.com"
                         val doctor : String = "joel shah"
                         val mobile : String = "838393788"
 
@@ -90,7 +90,7 @@ class detailactivity : AppCompatActivity() {
 
 
 
-                        databaseReference = FirebaseDatabase.getInstance().reference.child("Appointments").child("teastid01")
+                        databaseReference = FirebaseDatabase.getInstance().reference.child("Appointments").child("testid02")
 
                         databaseReference.setValue(appoinmet).addOnCompleteListener {
 

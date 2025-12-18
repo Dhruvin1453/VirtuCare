@@ -1,4 +1,5 @@
 package com.example.virtucare
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import com.bumptech.glide.Glide
@@ -32,10 +33,10 @@ class topdoctoradapter (private val context: Context,private val doctorlist : Ar
 
         holder.tvDname.text = currentList.name
         holder.tvExperience.text = currentList.experience
-        holder.tvSpecialis.text = currentList.specilization
+        holder.tvSpecialis.text = currentList.specialization
 
         Glide.with(holder.itemView.context)
-            .load(currentList.imageurl)
+            .load(currentList.imageUrl)
             .into(holder.imageView)
 
 
@@ -44,6 +45,10 @@ class topdoctoradapter (private val context: Context,private val doctorlist : Ar
             val intent = Intent(context, detailactivity::class.java)
             intent.putExtra("object",currentList)
             context.startActivity(intent)
+            if( context is Activity) {
+                context.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            }
+
         }
 
     }
