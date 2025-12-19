@@ -34,6 +34,7 @@ class topdoctoradapter (private val context: Context,private val doctorlist : Ar
         holder.tvDname.text = currentList.name
         holder.tvExperience.text = currentList.experience
         holder.tvSpecialis.text = currentList.specialization
+        holder.tvTime.text = currentList.availableDaysTime
 
         Glide.with(holder.itemView.context)
             .load(currentList.imageUrl)
@@ -65,6 +66,7 @@ class topdoctoradapter (private val context: Context,private val doctorlist : Ar
         val tvSpecialis : TextView = itemView.findViewById<TextView>(R.id.tvSpecialis)
         val tvExperience : TextView = itemView.findViewById<TextView>(R.id.tvExperience)
         val imageView: ImageView = itemView.findViewById(R.id.doctorImage)
+        val tvTime : TextView = itemView.findViewById<TextView>(R.id.tvTime)
 
     }
 

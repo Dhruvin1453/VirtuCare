@@ -11,6 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.FileProvider
 import com.bumptech.glide.Glide
+import com.cloudinary.android.MediaManager
+import com.cloudinary.android.callback.ErrorInfo
+import com.cloudinary.android.callback.UploadCallback
 import com.example.virtucare.databinding.ActivityRegitrationDoctorBinding
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
@@ -102,19 +105,26 @@ class RegitrationDoctor : AppCompatActivity() {
             return
         }
 
-        val storageRef = FirebaseStorage.getInstance()
-            .getReference("DoctorImages")
-            .child(System.currentTimeMillis().toString() + ".jpg")
+       val filePath = selectedImageUri.toString()
 
-        storageRef.putFile(selectedImageUri!!)
-            .addOnSuccessListener {
-                storageRef.downloadUrl.addOnSuccessListener { uri ->
-                    saveDoctorData(uri.toString())
+        MediaManager.get().upload(selectedImageUri)
+            .unsigned("student_unsigned")
+            .callback(object : UploadCallback {
+                override fun onSuccess(requestId: String?, resultData: Map<*, *>?) {
+                    val imageUrl = resultData?.get("secure_url") as String
+                    saveDoctorData(imageUrl)
                 }
-            }
-            .addOnFailureListener {
-                Toast.makeText(this, "Image upload failed", Toast.LENGTH_SHORT).show()
-            }
+
+                override fun onError(requestId: String?, error: ErrorInfo?) {
+                    Toast.makeText(this@RegitrationDoctor, error?.description, Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onStart(requestId: String?) {}
+                override fun onProgress(requestId: String?, bytes: Long, totalBytes: Long) {}
+                override fun onReschedule(requestId: String?, error: ErrorInfo?) {}
+            })
+            .dispatch()
+
     }
 
     // 💾 Save doctor details

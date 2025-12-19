@@ -52,16 +52,6 @@
                         />
 
 
-                    <TextView
-                        android:id="@+id/tvspecial"
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="start"
-                        android:layout_margin="1dp"
-                        android:textSize="15sp"
-                        android:layout_height="wrap_content"
-                        android:text="Orthopedic"
-
-                        />
 
 
                     <LinearLayout
@@ -71,36 +61,28 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/tvspecial"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
+                            android:layout_gravity="start"
                             android:layout_margin="1dp"
-                            android:text="9:00"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="3dp"
-                            android:layout_marginEnd="3dp"
-                            android:text="-"
-
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="6:00"
                             android:layout_weight="1"
+                            android:textSize="15sp"
+                            android:layout_height="wrap_content"
+                            android:text="Orthopedic"
+
                             />
+
+
+
 
 
                         <TextView
                             android:id="@+id/tvExperience"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5"
 
-                        /> <TextView
+                            /> <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="year"
@@ -108,6 +90,15 @@
 
 
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:text="9:00"
+                        />
+
 
 
 

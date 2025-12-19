@@ -20,7 +20,7 @@
 
     <!-- BOTTOM STICKY SECTION -->
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/doctorImage"
         android:layout_width="0dp"
         android:layout_height="300dp"
         android:scaleType="centerCrop"

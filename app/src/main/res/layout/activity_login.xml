@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".login">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="40dp"
+        android:src="@drawable/login"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="@color/maincolor"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/inbox"
+            app:tint="@color/maincolor"
+            android:gravity="center"
+            android:layout_margin="5dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Email"
+            android:id="@+id/email"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:layout_margin="5dp"
+            android:gravity="start" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/lock"
+            app:tint="@color/maincolor"
+            android:layout_gravity="bottom"
+            android:layout_margin="5dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Password"
+            android:id="@+id/pass"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:layout_margin="5dp"
+            android:gravity="start" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/maincolor"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        android:layout_margin="10dp"
+        android:id="@+id/btnlogin"
+        android:text="Login"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:textColor="#999999"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:id="@+id/googlesignin"
+        app:cornerRadius="8dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        app:iconGravity="textStart"
+        app:icon="@drawable/google"
+        android:text="Login with Google"
+        tools:ignore="ExtraText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Now to logistics ?"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/btnsign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Register"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="@color/maincolor"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

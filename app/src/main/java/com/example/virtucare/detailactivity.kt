@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.bumptech.glide.Glide
 import com.example.virtucare.databinding.ActivityDetailactivityBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -51,7 +52,15 @@ class detailactivity : AppCompatActivity() {
             tvspecial.text = item.specialization
             tvExperience.text = item.experience
             tvBio.text = item.bio
-            tvAdress.text = item.email
+            tvAdress.text = item.location
+
+
+            Glide.with(this@detailactivity)
+                .load(item.imageUrl)
+                .centerCrop()
+                .into(doctorImage)
+
+
 
             backbutton.setOnClickListener {
                 finish()
